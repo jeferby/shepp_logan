@@ -4,7 +4,7 @@ this is a function to make simulated data in IVIM, and data is shepp-logan.
 
 After running directly, a folder named IVIM_data will be generated. Under this folder, there will be folders marked by numbers, which contain PF, D, D* and signal data
 
-![4cc9208c1fc130faf23ebf5096ef5e7.png](https://cdn.nlark.com/yuque/0/2023/png/521487/1680836049812-4e0bea15-f6d0-4381-9b02-82e91023e775.png)
+
 
 Corresponding to the data of f, D*, D respectively
 
@@ -27,3 +27,4 @@ The numbers in the shepp-logan diagram below represent the parameter settings in
 ```
 
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/521487/1680942189842-ad2fd8cc-46f0-4b64-9837-fc4973287975.png)
+
