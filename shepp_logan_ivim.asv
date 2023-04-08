@@ -8,7 +8,7 @@
 %  *number is the number of output type data 
 % scope is [GM, WM, HGG, LGG, Min,Max]
 size_image = 256;
-
+number = 7;
 b = [0, 25, 50, 75, 100, 150, 300, 800, 1000];
 %% parameter configuration 
 load('E.mat')
@@ -30,42 +30,42 @@ for t = 1:number
     D1_random_scope(1:4) = (D1_mean_scope(1:4) - D1_standard_scope) + 2*D1_standard_scope.*rand(1,1);
     D_random_scope(1:4) = (D_mean_scope(1:4) - D_standard_scope) + 2*D_standard_scope.*rand(1,1);
     %% mean PF 
-    E(1,1)=f_random_scope(6);%max外壳
-    E(2,1)=-(f_random_scope(6)-f_random_scope(1));%设置GM
-    E(3,1)=-(f_random_scope(1)-f_random_scope(2));%设置WM
-    E(4,1)=-(f_random_scope(1)-f_random_scope(2));%设置WM
-    E(5,1)=-(f_random_scope(1)-f_random_scope(4));%设置LGG
-    E(6,1)=-(f_random_scope(1)-f_random_scope(4));%设置LGG
-    E(7,1)=-(f_random_scope(1)-f_random_scope(4));%设置LGG
-    E(8,1)=(f_random_scope(3)-f_random_scope(1));%设置HGG
-    E(9,1)=(f_random_scope(3)-f_random_scope(1));%设置HGG
-    E(10,1)=(f_random_scope(3)-f_random_scope(1));%设置HGG
+    E(1,1)=f_random_scope(6);%max skull
+    E(2,1)=-(f_random_scope(6)-f_random_scope(1));%set GM
+    E(3,1)=-(f_random_scope(1)-f_random_scope(2));%set WM
+    E(4,1)=-(f_random_scope(1)-f_random_scope(2));%set WM
+    E(5,1)=-(f_random_scope(1)-f_random_scope(4));%set LGG
+    E(6,1)=-(f_random_scope(1)-f_random_scope(4));%set LGG
+    E(7,1)=-(f_random_scope(1)-f_random_scope(4));%set LGG
+    E(8,1)=(f_random_scope(3)-f_random_scope(1));%set HGG
+    E(9,1)=(f_random_scope(3)-f_random_scope(1));%set HGG
+    E(10,1)=(f_random_scope(3)-f_random_scope(1));%set HGG
     PF= phantom(E,size_image);
 
     %% mean D1 
-    E(1,1)=D1_random_scope(6);%max外壳
-    E(2,1)=-(D1_random_scope(6)-D1_random_scope(1));%设置GM
-    E(3,1)=-(D1_random_scope(1)-D1_random_scope(2));%设置WM
-    E(4,1)=-(D1_random_scope(1)-D1_random_scope(2));%设置WM
-    E(5,1)=-(D1_random_scope(1)-D1_random_scope(4));%设置LGG
-    E(6,1)=-(D1_random_scope(1)-D1_random_scope(4));%设置LGG
-    E(7,1)=-(D1_random_scope(1)-D1_random_scope(4));%设置LGG
-    E(8,1)=(D1_random_scope(3)-D1_random_scope(1));%设置HGG
-    E(9,1)=(D1_random_scope(3)-D1_random_scope(1));%设置HGG
-    E(10,1)=(D1_random_scope(3)-D1_random_scope(1));%设置HGG
+    E(1,1)=D1_random_scope(6);%max skull
+    E(2,1)=-(D1_random_scope(6)-D1_random_scope(1));%set GM
+    E(3,1)=-(D1_random_scope(1)-D1_random_scope(2));%set WM
+    E(4,1)=-(D1_random_scope(1)-D1_random_scope(2));%set WM
+    E(5,1)=-(D1_random_scope(1)-D1_random_scope(4));%set LGG
+    E(6,1)=-(D1_random_scope(1)-D1_random_scope(4));%set LGG
+    E(7,1)=-(D1_random_scope(1)-D1_random_scope(4));%set LGG
+    E(8,1)=(D1_random_scope(3)-D1_random_scope(1));%set HGG
+    E(9,1)=(D1_random_scope(3)-D1_random_scope(1));%set HGG
+    E(10,1)=(D1_random_scope(3)-D1_random_scope(1));%set HGG
     D1 = phantom(E,size_image);
 
     %% mean D
-    E(1,1)=D_random_scope(6);%max外壳
-    E(2,1)=-(D_random_scope(6)-D_random_scope(1));%设置GM
-    E(3,1)=-(D_random_scope(1)-D_random_scope(2));%设置WM
-    E(4,1)=-(D_random_scope(1)-D_random_scope(2));%设置WM
-    E(5,1)=-(D_random_scope(1)-D_random_scope(4));%设置LGG
-    E(6,1)=-(D_random_scope(1)-D_random_scope(4));%设置LGG
-    E(7,1)=-(D_random_scope(1)-D_random_scope(4));%设置LGG
-    E(8,1)=(D_random_scope(3)-D_random_scope(1));%设置HGG
-    E(9,1)=(D_random_scope(3)-D_random_scope(1));%设置HGG
-    E(10,1)=(D_random_scope(3)-D_random_scope(1));%设置HGG
+    E(1,1)=D_random_scope(6);%max skull
+    E(2,1)=-(D_random_scope(6)-D_random_scope(1));%set GM
+    E(3,1)=-(D_random_scope(1)-D_random_scope(2));%set WM
+    E(4,1)=-(D_random_scope(1)-D_random_scope(2));%set WM
+    E(5,1)=-(D_random_scope(1)-D_random_scope(4));%set LGG
+    E(6,1)=-(D_random_scope(1)-D_random_scope(4));%set LGG
+    E(7,1)=-(D_random_scope(1)-D_random_scope(4));%set LGG
+    E(8,1)=(D_random_scope(3)-D_random_scope(1));%set HGG
+    E(9,1)=(D_random_scope(3)-D_random_scope(1));%set HGG
+    E(10,1)=(D_random_scope(3)-D_random_scope(1));%set HGG
     D = phantom(E,size_image);
 
     %% IVIM fit
@@ -76,7 +76,14 @@ for t = 1:number
     Signals(i,:,:) = S0 * (PF * exp(-b(i) * D1) + (1 - PF) * exp(-b(i) * D));
     end
     %% save data
-    mkdir('IVIM_data',int2str(i));
-    save(['./IVIM_data/',num2str(n),'.mat'],['k',num2str(n)]);
+    mkdir('IVIM_data',int2str(t));
+    filepath = ['.\IVIM_data\',int2str(t)];
+    cd(filepath);
+    save(['signals','.npy'],'Signals');
+    save(['PF','.npy'],'PF');
+    save(['D1','.npy'],'D1');
+    save(['D','.npy'],'D');
+    cd ../../
 end
 % end
+for a=1:
